@@ -41,6 +41,7 @@ Para realizar el despliegue de WordPress en AWS se deben realizar el procedimien
 ### 4. cambie los permisos del directorio /var/www y sus subdirectorios.
   
   [ec2-user ~]$ sudo chmod 2775 /var/www && find /var/www -type d -exec sudo chmod 2775 {} \;
+  
   [ec2-user ~]$ find /var/www -type f -exec sudo chmod 0664 {} \;
   
 ## Proteger el servidor de base de datos
@@ -88,7 +89,9 @@ Para realizar el despliegue de WordPress en AWS se deben realizar el procedimien
 ### 5. Conceder privilegios
 
   GRANT ALL PRIVILEGES ON `wordpress-db`.* TO "wordpress-user"@"localhost";
+  
   FLUSH PRIVILEGES;
+  
   exit
 
 ## Crear y modificar el archivo wp-config.php
@@ -104,18 +107,27 @@ Para realizar el despliegue de WordPress en AWS se deben realizar el procedimien
 ### 3. Modifique los siguientes valores de acuerdo a lo configurado
 
   define('DB_NAME', 'wordpress-db');
+  
   define('DB_USER', 'wordpress-user');
+  
   define('DB_PASSWORD', 'your_strong_password');
  
 ### 4. Complete los siguientes valores. Para esto visite el siguiente enlace: https://api.wordpress.org/secret-key/1.1/salt/
 
   define('AUTH_KEY', '');
+  
   define('SECURE_AUTH_KEY', '');
+  
   define('LOGGED_IN_KEY',  '');
+  
   define('NONCE_KEY', '');
+  
   define('AUTH_SALT', '');
+  
   define('SECURE_AUTH_SALT', '');
+  
   define('LOGGED_IN_SALT', '');
+  
   define('NONCE_SALT',  '');
   
 ### 5. Abra el archivo httpd.conf
