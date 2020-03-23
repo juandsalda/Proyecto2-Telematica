@@ -1,5 +1,6 @@
 ## Definición de Equipo (integrantes, emails)
 @Author: Juan Diego Saldarriaga @Email: jsalda23@eafit.edu.co
+
 @Author: Alejandro Diaz Cano @Email: adiazc@eafit.edu.co
 
 ## Asignación de roles y responsabilidades de cada integrante del equipo en el desarrollo del proyecto2.
