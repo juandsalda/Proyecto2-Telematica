@@ -1,6 +1,17 @@
 ## Definición de Equipo (integrantes, emails)
+@Author: Juan Diego Saldarriaga @Email: jsalda23@eafit.edu.co
+@Author: Alejandro Diaz Cano @Email: adiazc@eafit.edu.co
 
 ## Asignación de roles y responsabilidades de cada integrante del equipo en el desarrollo del proyecto2.
+
+#### Juan Diego Saldarriaga: 
+  - Responsable del despliegue en AWS
+  - Responsable del rendimiento
+  - Responsable de seguridad
+
+#### Alejandro Diaz Cano:
+  - 
+
 
 ## Especificación de requisitos no funcionales.
 
