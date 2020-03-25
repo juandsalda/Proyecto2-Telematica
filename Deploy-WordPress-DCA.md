@@ -19,8 +19,12 @@ Configuramos el tunel por el puerto 8080 y click en el boton add.
 Hacemos click en Open y nos habre un cmd, en el CMD ingresamos USER & PASSWORD.
 
 5. una vez se establece la conexión con el DCA ingresamos los comandos:
-5.1
-$ sudo yum remove docker \
+
+5.1. con estos comando removemos versiones antiguas de Docker.
+
+
+
+    $ sudo yum remove docker \
                   docker-client \
                   docker-client-latest \
                   docker-common \
@@ -29,57 +33,68 @@ $ sudo yum remove docker \
                   docker-logrotate \
                   docker-engine
 
-con estos comando removemos versiones antiguas de Docker.
 
-5.2
-$ sudo yum install -y yum-utils \
-  device-mapper-persistent-data \
-  lvm2
+5.2.  Con estos comandos instalamos los paquetes requeridos
 
-Con estos comandos instalamos los paquetes requeridos
+     $ sudo yum install -y yum-utils \
+         device-mapper-persistent-data 
+         \lvm2
 
-5.3
-$ sudo yum-config-manager \
-    --add-repo \
-    https://download.docker.com/linux/centos/docker-ce.repo
+
+
+5.3. con estos comandos instalamos Docker
+
+
+     $ sudo yum-config-manager \
+      --add-repo \
+      https://download.docker.com/linux/centos/docker-ce.repo
     
-con estos comandos instalamos Docker
 
-5.4
-$ sudo systemctl start docker
 
-con este comando iniciamos Docker
+5.4. con este comando iniciamos Docker
 
-5.5
-$ sudo docker run hello-world
 
-con este comando verificamos que Docker este corriendo correctamente con su contendor por defecto
+    $ sudo systemctl start docker
 
-5.6
 
-$ sudo yum install /path/to/package.rpm
 
-con este comando instala Docker Engine - Community, cambiando la ruta a continuación a la ruta donde descargó el paquete Docker.
+5.5.  con este comando verificamos que Docker este corriendo correctamente con su contendor por defecto
 
-5.7
-$sudo systemctl start docker
+     $ sudo docker run hello-world
 
-con este comando inicia docker
 
-5.8
-$ sudo docker run hello-world
+5.6. con este comando instala Docker Engine - Community, cambiando la ruta a continuación a la ruta donde descargó el paquete Docker.
+
+
+
+     $ sudo yum install /path/to/package.rpm
+
+
+5.7. con este comando inicia docker
+
+
+    $sudo systemctl start docker
+
+
+
+5.8. Con este comando verificamos que la imagen corra correctamente
+
+    $ sudo docker run hello-world
  
-Con este comando verificamos que la imagen corra correctamente
 
 6. Creamos un fichero llamado con el comando
-$mkdir Proyectos2
-$mkdir grupo26
 
-7. Creamos el archivo de texto 
-$touch docker-compose.yml
+       $mkdir Proyectos2
+       $mkdir grupo26
+
+7. Creamos el archivo de texto
+
+       $touch docker-compose.yml
 
 8. Accedemos al archivo de texto para editarlo.
-$vi docker-compose.yml
+
+
+       $vi docker-compose.yml
 
 9. despues de acceder ingresamos la especificacion tecnica como servicios que usaremos y que tipos de bases de Datos
 _________________________________________________________
@@ -143,13 +158,15 @@ _________________________________________________________
 
 ________________________________________________________
 
-10. Guardamos el documento oprimiendo CTRL + C, este comando nos manda al pie del documento donde agregamos ":wq" para guardar y salir.
+10. Guardamos el documento oprimiendo "CTRL + C", este comando nos manda al pie del documento donde agregamos ":wq" para guardar y salir.
 
 11. Una vez en la terminar lanzamos la imagen del Docker
-$docker-compose up -d
+
+        $docker-compose up -d
 
 12. una vez lanzada la imagen abrimos nuestro navegador preferido e ingresamos
-localhost/
+
+         localhost/
 
 13. allí configuramos el docker y la pagina esta desplegada en el servidor local
 Ingresamos el nombre de sitio, Usuario y contraseña.
